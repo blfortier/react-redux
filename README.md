@@ -1,1 +1,3 @@
-4.a.d\nReact and Redux\nBrittney Fortier
+4.a.d
+React and Redux
+Brittney Fortier
