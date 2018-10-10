@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Ninjas extends Component {
-    render() {
-        // console.log(this.props);
-        // destructure -- grab the property names
-        // and save them to variables
-        const { ninjas } = this.props;
-        const ninjaList = ninjas.map(ninja => {
-            return (
-                <div className = "ninja" key = { ninja.id }>
-                    <div>Name: { ninja.name }</div>
-                    <div>Age: { ninja.age }</div>
-                    <div>Belt: { ninja.belt }</div>
-                </div>
-            )
-        })
+// functional component, no state. Concerned w/ UI
+const Ninjas = ({ninjas}) => {
+    const ninjaList = ninjas.map(ninja => {
         return (
-            <div className = "ninja-list">
-                { ninjaList }
+            <div className = "ninja" key = { ninja.id }>
+                <div>Name: { ninja.name }</div>
+                <div>Age: { ninja.age }</div>
+                <div>Belt: { ninja.belt }</div>
             </div>
         )
-    }
+    })
+    return (
+        <div className = "ninja-list">
+            { ninjaList }
+        </div>
+    )
 }
+
 
 export default Ninjas;
 
