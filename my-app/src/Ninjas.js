@@ -1,4 +1,5 @@
 import React from 'react';
+import './Ninjas.css';
 
 // functional component, no state. Concerned w/ UI
 const Ninjas = ({ninjas, deleteNinja}) => {
